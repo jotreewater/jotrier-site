@@ -1,0 +1,10 @@
+{
+  "name": "jotrier-backend",
+  "version": "1.0.0",
+  "description": "Express + MongoDB backend for the jotrier website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Joseph Trierweiler"
+}
