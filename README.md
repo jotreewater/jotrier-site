@@ -1,14 +1,10 @@
 # jotrier site
 
----
-
 ## Description
 
 This repo is for hosting files related to the jotrier.com website. Jotrier is a personal portfolio website for hosting Joseph Trierweiler's resume, projects, and blog posts. The website's current status is **incomplete**.
 
 ## Below is a list of features to be implemented in sequence
-
----
 
 ### Phase 1: Backend Setup
 
