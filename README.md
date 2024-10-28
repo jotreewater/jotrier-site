@@ -1,4 +1,4 @@
-# jotrier site
+# jotrier-site
 
 This repo is for hosting files related to the jotrier.com website. Jotrier is a personal portfolio website for hosting Joseph Trierweiler's resume, projects, and blog posts. The website's current status is **incomplete**.
 
