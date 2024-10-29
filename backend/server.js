@@ -1,5 +1,10 @@
+//local imports
+const { errorMiddleware } = require('./middleware/errorMiddleware');
+const connectDB = require('./config/db');
+
 // env setup
 const dotenv = require('dotenv').config();
+connectDB();
 //console.log(`Server is in mode: ${process.env.NODE_ENV}`);
 //console.log(`Server will run on port: ${process.env.PORT}`);
 
@@ -10,11 +15,13 @@ app.use(express.json()); // to allow requests with JSON payloads
 app.use(express.urlencoded({ extended: false })); // Uses querystring node library to parse form data
 
 // routes
+app.use('/api/user', require('./routes/userRoutes'));
 
 // middleware
+app.use(errorMiddleware);
 
 // default response
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.status(200).json({ message: `You've hit the jotrier API` });
 });
 

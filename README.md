@@ -43,3 +43,4 @@ This repo is for hosting files related to the jotrier.com website. Jotrier is a 
 ### Phase 5: Extra Features
 
 - Implement some fun react + css for animations
+- Implement IP logging to add more security for login
