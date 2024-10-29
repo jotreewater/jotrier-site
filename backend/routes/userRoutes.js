@@ -1,7 +1,7 @@
-// global imports
+// external imports
 const express = require('express');
 
-// local imports
+// internal imports
 const { createUser, getUser } = require('../controllers/userController');
 
 // init routes

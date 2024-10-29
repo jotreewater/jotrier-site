@@ -19,20 +19,20 @@ const generateToken = (id) => {
 const createUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
-  // Validation
+  // validation
   if (!name || !email || !password) {
     res.status(400);
     throw new Error('Please include name, email, and password.');
   }
 
-  // Check if user exists
+  // check if user exists
   const userExists = await User.findOne({ email });
   if (userExists) {
     res.status(400);
     throw new Error('User already exists');
   }
 
-  // Create new user with hashed password
+  // create new user with hashed password
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -51,17 +51,18 @@ const createUser = asyncHandler(async (req, res) => {
   }
 });
 
-// private: email, password required
+// email, password required
+// returns JWT Token
 const getUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
-  // Input validation
+  // input validation
   if (!email || !password) {
     res.status(400);
     throw new Error('Email and password are required.');
   }
 
-  // Find user by email
+  // find user by email
   const user = await User.findOne({ email });
   if (!user) {
     // Generic message to prevent information leakage
@@ -69,14 +70,14 @@ const getUser = asyncHandler(async (req, res) => {
     throw new Error('Invalid credentials');
   }
 
-  // Check password
+  // check password
   const isPasswordMatch = await bcrypt.compare(password, user.password);
   if (!isPasswordMatch) {
     res.status(401);
     throw new Error('Invalid credentials');
   }
 
-  // Respond with user info and token
+  // respond with user info and token
   res.status(200).json({
     _id: user._id,
     name: user.name,

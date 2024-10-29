@@ -44,3 +44,6 @@ This repo is for hosting files related to the jotrier.com website. Jotrier is a 
 
 - Implement some fun react + css for animations
 - Implement IP logging to add more security for login
+- Implement JWT refresh tokens, and shorten JWT token lifecycle
+- Implement cycling JWT_SECRET
+- Implement JWT's getting revoked due to logout.
