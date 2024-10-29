@@ -53,7 +53,7 @@ const createUser = asyncHandler(async (req, res) => {
 
 // email, password required
 // returns JWT Token
-const getUser = asyncHandler(async (req, res) => {
+const generateJWT = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
   // input validation
@@ -86,8 +86,15 @@ const getUser = asyncHandler(async (req, res) => {
   });
 });
 
+const getUser = asyncHandler(async (req, res) => {
+  // respond with user info
+  const user = { id: req.user._id, email: req.user.email, name: req.user.name };
+  res.status(200).json(req.user);
+});
+
 // exports
 module.exports = {
   createUser,
+  generateJWT,
   getUser,
 };
