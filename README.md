@@ -6,11 +6,11 @@ This repo is for hosting files related to the jotrier.com website. Jotrier is a 
 
 ### Phase 1: Backend Setup
 
-- Set up an Express server for handling routing, middleware, and HTTP requests
-- Set up a local MongoDB database for storing user and blog data
-- Set up a CRUD API for handling users
-- Set up a middleware for handling errors
-- Set up a middleware for handling private routes for users
+- ~~Set up an Express server for handling routing, middleware, and HTTP requests~~
+- ~~Set up a local MongoDB database for storing user and blog data~~
+- ~~Set up a CRUD API for handling users~~
+- ~~Set up a middleware for handling errors~~
+- ~~Set up a middleware for handling private routes for users~~
 
 ### Phase 2: Frontend Setup
 
@@ -47,3 +47,5 @@ This repo is for hosting files related to the jotrier.com website. Jotrier is a 
 - Implement JWT refresh tokens, and shorten JWT token lifecycle
 - Implement cycling JWT_SECRET
 - Implement JWT's getting revoked due to logout.
+- Implement being able to change password/email/delete account
+- Implement non-admin accounts being able to comment on blog posts
