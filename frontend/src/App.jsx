@@ -5,19 +5,23 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Projects from './pages/Projects';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <Router>
-        <div className="container">
-          <Header />
+        <Header />
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
-        </div>
+        </main>
+        <Footer />
       </Router>
     </>
   );

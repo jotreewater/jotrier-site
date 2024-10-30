@@ -1,0 +1,32 @@
+.header {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-red);
+  border-bottom: 0.5rem solid var(--color-yellow);
+  padding: 1rem 2rem;
+}
+
+.header a {
+  color: var(--text-alt);
+}
+
+.header a:hover {
+  color: var(--color-yellow);
+}
+
+.header a:active {
+  color: var(--color-yellow);
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav li {
+  margin-left: 1rem;
+}
