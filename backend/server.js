@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false })); // parse form data
 
 // routes
 app.use('/api/user', require('./routes/userRoutes'));
+app.use('/api/blog', require('./routes/blogRoutes'));
 
 // middleware
 app.use(errorMiddleware);

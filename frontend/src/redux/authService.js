@@ -23,7 +23,6 @@ export const register = async (userData) => {
     await delay(2000);
     return handleResponse(response);
   } catch (error) {
-    console.log();
     console.error('Registration error:', error);
     throw error;
   }

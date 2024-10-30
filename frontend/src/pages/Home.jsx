@@ -53,13 +53,20 @@ export default function Home() {
           >
             <div>
               <div className="media-container">
-                <AiOutlineFilePdf
-                  style={{
-                    height: '100%',
-                    width: '100%',
-                    color: 'var(--color-red)',
-                  }}
-                />
+                <a
+                  href={pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-color-orange"
+                >
+                  <AiOutlineFilePdf
+                    style={{
+                      height: '100%',
+                      width: '100%',
+                      color: 'var(--color-red)',
+                    }}
+                  />
+                </a>
               </div>
               <div>
                 <p>
@@ -84,13 +91,15 @@ export default function Home() {
           >
             <div>
               <div className="media-container">
-                <AiOutlineProject
-                  style={{
-                    height: '100%',
-                    width: '100%',
-                    color: 'var(--color-red)',
-                  }}
-                />
+                <Link to="/projects">
+                  <AiOutlineProject
+                    style={{
+                      height: '100%',
+                      width: '100%',
+                      color: 'var(--color-red)',
+                    }}
+                  />
+                </Link>
               </div>
               <div>
                 <p>
@@ -108,13 +117,15 @@ export default function Home() {
           >
             <div>
               <div className="media-container">
-                <RiArticleLine
-                  style={{
-                    height: '100%',
-                    width: '100%',
-                    color: 'var(--color-red)',
-                  }}
-                />
+                <Link to="/blog">
+                  <RiArticleLine
+                    style={{
+                      height: '100%',
+                      width: '100%',
+                      color: 'var(--color-red)',
+                    }}
+                  />
+                </Link>
               </div>
               <div>
                 <p>

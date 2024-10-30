@@ -9,6 +9,8 @@ import Projects from './pages/Projects';
 import Footer from './components/Footer';
 import User from './pages/User';
 import { PrivateRoute } from './components/PrivateRoute';
+import ScrollToTop from './components/ScrollToTop';
+import Blog from './pages/blog/Blog';
 
 function App() {
   return (
@@ -16,12 +18,13 @@ function App() {
       <Router>
         <Header />
         <main>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/projects" element={<Projects />} />
-
+            <Route path="/blog" element={<Blog />} />
             <Route
               path="/user"
               element={
