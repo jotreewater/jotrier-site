@@ -42,3 +42,7 @@
   padding: 1rem;
   color: var(--color-red);
 }
+
+a:active {
+  color: var(--color-yellow);
+}

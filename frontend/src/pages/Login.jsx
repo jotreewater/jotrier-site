@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-//import { login, reset } from '../redux/slices/authSlice';
 import { useNavigate } from 'react-router-dom';
 
+import { login, reset } from '../redux/authSlice';
 import Hero from '../components/Hero';
 import './styles/Login.css';
 
@@ -13,12 +13,12 @@ export default function Login() {
     password: '',
   });
 
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const { user, isLoading, isSuccess, isError, message } = useSelector(
-  //   (state) => state.auth
-  // );
+  const { user, isLoading, isSuccess, isError, message } = useSelector(
+    (state) => state.auth
+  );
 
   const { email, password } = formData;
 
@@ -32,18 +32,16 @@ export default function Login() {
   const onSubmit = (e) => {
     e.preventDefault();
     const userData = { email, password };
-    const resultAction = dispatch(login(userData));
+    dispatch(login(userData));
   };
 
-  // useEffect(() => {
-  //   if (isError) {
-  //     toast.error(message);
-  //   }
-  //   if (isSuccess || user) {
-  //     navigate('/');
-  //   }
-  //   dispatch(reset());
-  // }, [isSuccess, isError, user, message, navigate, dispatch]);
+  useEffect(() => {
+    if (isSuccess || user) {
+      navigate('/');
+    }
+    dispatch(reset());
+  }, [isSuccess, user, navigate, dispatch]);
+
   return (
     <>
       <Hero>
@@ -77,13 +75,13 @@ export default function Login() {
               required
             />
           </div>
-          <div className="filler"></div>
+          {isError && <div className="error-message">{message}</div>}
           <div className="form-group">
-            <button className="button-reverse-red block">Submit</button>
+            <button className="button-reverse-red block" disabled={isLoading}>
+              {isLoading ? 'Submitting...' : 'Submit'}
+            </button>
           </div>
         </form>
-        <div className="filler"></div>
-        <div className="filler"></div>
       </section>
     </>
   );

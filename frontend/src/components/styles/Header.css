@@ -12,6 +12,7 @@
 
 .header a {
   color: var(--text-alt);
+  cursor: pointer;
 }
 
 .header a:hover {

@@ -7,3 +7,10 @@
 .filler {
   height: 1rem;
 }
+
+.error-message {
+  color: var(--color-yellow);
+  margin-bottom: 1rem;
+  margin-top: -10px;
+  margin-left: 1rem;
+}
