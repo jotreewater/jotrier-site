@@ -15,11 +15,11 @@ This repo is for hosting files related to the jotrier.com website. Jotrier is a 
 ### Phase 2: Frontend Setup
 
 - Set up a React frontend with the folloiwng pages:
-  - Home Page
+  - ~~Home Page~~
   - Login Page
   - Register Page
   - Me Page
-- Use Home Page to invent css stylings for the other pages
+- ~~Use Home Page to invent css stylings for the other pages~~
 - Utilize React Router for routing
 - Utilze Redux and Redux Toolkit to handle application state
 - Implement Register features
@@ -35,6 +35,7 @@ This repo is for hosting files related to the jotrier.com website. Jotrier is a 
   - Blog Post
   - Create Blog Post
   - Edit Blog Post
+  - Portfolio Page
 
 ### Phase 4: Deploy
 
