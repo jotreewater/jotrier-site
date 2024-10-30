@@ -1,0 +1,9 @@
+.section-header {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-red);
+}
+
+.filler {
+  height: 1rem;
+}

@@ -38,13 +38,11 @@ body {
   height: 100%;
   background-color: var(--background-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
 }
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-primary);
 }
 
 ul {
@@ -63,6 +61,14 @@ img {
 
 main {
   min-height: 100vh;
+}
+
+button {
+  font-size: 1rem;
+}
+
+input {
+  font-size: 1rem;
 }
 
 .button {
@@ -89,6 +95,7 @@ main {
 .bg-primary {
   background-color: var(--background-primary);
 }
+
 .bg-color-red {
   background-color: var(--color-red);
 }
@@ -146,33 +153,12 @@ main {
 }
 
 .button-reverse-red {
+  font-weight: 700;
   display: inline-block;
   padding: 1rem 2rem;
   color: var(--color-red);
   background-color: transparent;
-  border: 2px solid var(--color-red);
-  border-radius: 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s, color 0.3s;
-}
-
-.button-reverse:hover {
-  background-color: var(--color-red);
-  color: var(--text-alt);
-}
-
-.button-reverse:active {
-  transform: scale(0.95);
-}
-
-.button-reverse-red {
-  display: inline-block;
-  padding: 1rem 2rem;
-  color: var(--color-red);
-  background-color: transparent;
-  border: 2px solid var(--color-red);
+  border: 0.25rem solid var(--color-red);
   border-radius: 16px;
   cursor: pointer;
   text-align: center;
@@ -181,55 +167,12 @@ main {
 }
 
 .button-reverse-red:hover {
-  background-color: var(--color-red);
+  background-color: var(--color-orange);
+  border: 0.25rem solid var(--color-orange);
   color: var(--text-alt);
 }
 
 .button-reverse-red:active {
-  transform: scale(0.95);
-}
-
-.button-reverse-red {
-  display: inline-block;
-  padding: 1rem 2rem;
-  color: var(--color-red);
-  background-color: transparent;
-  border: 2px solid var(--color-red);
-  border-radius: 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s, color 0.3s;
-}
-
-.button-reverse:hover {
-  background-color: var(--color-red);
-  color: var(--text-alt);
-}
-
-.button-reverse:active {
-  transform: scale(0.95);
-}
-
-.button-reverse-yellow {
-  display: inline-block;
-  padding: 1rem 2rem;
-  color: var(--color-yellow);
-  background-color: transparent;
-  border: 2px solid var(--color-yellow);
-  border-radius: 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s, color 0.3s;
-}
-
-.button-reverse-yellow :hover {
-  background-color: var(--color-yellow);
-  color: var(--text-alt);
-}
-
-.button-reverse-yellow :active {
   transform: scale(0.95);
 }
 
@@ -278,4 +221,45 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
+}
+
+.block {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 0.25rem solid var(--color-red);
+  border-radius: 16px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--color-orange);
+  outline: none;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
 }

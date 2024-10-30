@@ -6,21 +6,22 @@ import { Link } from 'react-router-dom';
 import { RiArticleLine } from 'react-icons/ri';
 
 import Card from '../components/Card';
-import './Home.css';
+import './styles/Home.css';
 import headshot from '../assets/fire1000.jpg';
 import pdf from '../assets/resume_08.29.2024.pdf';
+import Hero from '../components/Hero';
 
 export default function Home() {
   return (
     <>
-      <section className="heading">
+      <Hero>
         <h1>Hello, my name is Joseph</h1>
         <p>
           ...and this is my website <span className="rotating-element">🎉</span>
         </p>
-      </section>
+      </Hero>
 
-      <section className="bg-color-red-alt">
+      <section className="bg-color-red-alt ">
         <div className="section-header bounce">
           <h2>Scroll for more</h2>
           <div>
@@ -70,7 +71,8 @@ export default function Home() {
                   >
                     Click Here
                   </a>{' '}
-                  to open my resume in a new tab for your viewing pleasure.
+                  to open Joseph's resume in a new tab for your viewing
+                  pleasure.
                 </p>
               </div>
             </div>
@@ -127,34 +129,3 @@ export default function Home() {
     </>
   );
 }
-
-/*
- <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-          >
-            <div className="media-container">
-              <img src={headshot} alt="Joseph.png" className="headshot"></img>
-            </div>
-
-            <h3>About myself</h3>
-            <p>I'm a big shot</p>
-          </Card>
-          <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-          >
-            <div className="media-container">
-              <PDFViewer pdfUrl={pdf} />
-            </div>
-            <h3>Resume</h3>
-            <p>Download Link?</p>
-          </Card>
-          <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-          >
-            <h3>About myself</h3>
-            <p>I'm a big shot</p>
-          </Card>
-*/

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../redux/themeSlice';
 import { useEffect } from 'react';
 
-import './Header.css';
+import './styles/Header.css';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -23,17 +23,17 @@ export default function Header() {
         <nav className="nav">
           <ul>
             <li>
-              <Link to="/" className="nav-button">
+              <Link to="/login" className="nav-button">
                 /login
               </Link>
             </li>
             <li>
-              <Link to="/" className="nav-button">
+              <Link to="/register" className="nav-button">
                 /register
               </Link>
             </li>
             <li>
-              <Link to="/" className="nav-button">
+              <Link to="/projects" className="nav-button">
                 /projects
               </Link>
             </li>

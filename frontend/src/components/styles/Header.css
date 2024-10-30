@@ -5,8 +5,9 @@
   flex-direction: row;
   align-items: center;
   background-color: var(--color-red);
-  border-bottom: 0.5rem solid var(--color-yellow);
+  border-bottom: 0.25rem solid var(--color-yellow);
   padding: 1rem 2rem;
+  width: 100%;
 }
 
 .header a {

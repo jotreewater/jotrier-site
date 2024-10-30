@@ -1,0 +1,15 @@
+.hero {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--color-primary);
+}
+
+.hero p {
+  font-size: 3rem;
+  color: var(--color-orange);
+}
