@@ -30,9 +30,14 @@ export default function Header() {
         <nav className="nav">
           <ul>
             {user ? (
-              <li>
-                <Link onClick={onLogout}>/logout/{user.name}</Link>
-              </li>
+              <>
+                <li>
+                  <Link onClick={onLogout}>/logout</Link>
+                </li>
+                <li>
+                  <Link to="/user">/{user.name}</Link>
+                </li>
+              </>
             ) : (
               <>
                 <li>
