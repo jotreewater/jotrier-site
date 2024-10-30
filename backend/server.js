@@ -18,11 +18,11 @@ const app = express();
 app.use(express.json()); // to allow requests with JSON payloads
 app.use(express.urlencoded({ extended: false })); // parse form data
 
-// middleware
-app.use(errorMiddleware);
-
 // routes
 app.use('/api/user', require('./routes/userRoutes'));
+
+// middleware
+app.use(errorMiddleware);
 
 // default response
 app.get('/api', (req, res) => {

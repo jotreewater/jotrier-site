@@ -1,32 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+:root {
+  --background-primary: #ffffff;
+  --text-primary: #000000;
+  --text-alt: #ffffff;
+  --color-red: hsl(0, 80%, 50%);
+  --color-red-alt: hsl(0, 80%, 75%);
+  --color-orange: hsl(30, 80%, 50%);
+  --color-orange-alt: hsl(30, 80%, 75%);
+  --color-yellow: hsl(60, 80%, 50%);
+  --color-yellow-alt: hsl(60, 80%, 50%);
+}
+
+[data-theme='dark'] {
+  --background-primary: hsl(0, 0%, 10%);
+  --text-primary: hsl(0, 0%, 90%);
+  --text-alt: hsl(0, 0%, 10%);
+  --color-red: hsl(0, 60%, 50%);
+  --color-red-alt: hsl(0, 60%, 25%);
+  --color-orange: hsl(30, 60%, 50%);
+  --color-orange-alt: hsl(30, 60%, 25%);
+  --color-yellow: hsl(60, 60%, 50%);
+  --color-yellow-alt: hsl(60, 60%, 50%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: calc(0.75rem + 1.125em);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-  background-color: hsla(0, 0%, 90%, 1);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
   text-decoration: none;
-  color: #000;
-}
-
-p {
-  line-height: 1.5;
+  color: var(--text-color);
 }
 
 ul {
   list-style: none;
-}
-
-li {
-  line-height: 1.5;
 }
 
 h1,
@@ -37,42 +56,225 @@ h3 {
 }
 
 .container {
-  width: 100%;
-  max-width: 1080px;
+  width: 90%;
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 0 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--text-primary);
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
   text-align: center;
-  background-color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: var(--color-red-alt);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.bg-primary {
+  background-color: var(--background-primary);
+}
+.bg-color-red {
+  background-color: var(--color-red);
+}
+
+.bg-color-red-alt {
+  background-color: var(--color-red-alt);
+}
+
+.bg-color-orange {
+  background-color: var(--color-orange);
+}
+
+.bg-color-orange-alt {
+  background-color: var(--color-orange-alt);
+}
+
+.bg-color-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-color-yellow-alt {
+  background-color: var(--color-yellow-alt);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-alt {
+  color: var(--text-alt);
+}
+
+.text-color-red {
+  color: var(--color-red);
+}
+
+.text-color-red-alt {
+  color: var(--color-red-alt);
+}
+
+.text-color-orange {
+  color: var(--color-orange);
+}
+
+.text-color-orange-alt {
+  color: var(--color-orange-alt);
+}
+
+.text-color-yellow {
+  color: var(--color-yellow);
+}
+
+.text-color-yellow-alt {
+  color: var(--color-yellow-alt);
+}
+
+.button-reverse-red {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--color-red);
+  background-color: transparent;
+  border: 2px solid var(--color-red);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.button-reverse:hover {
+  background-color: var(--color-red);
+  color: var(--text-alt);
+}
+
+.button-reverse:active {
+  transform: scale(0.95);
+}
+
+.button-reverse-red {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--color-red);
+  background-color: transparent;
+  border: 2px solid var(--color-red);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.button-reverse-red:hover {
+  background-color: var(--color-red);
+  color: var(--text-alt);
+}
+
+.button-reverse-red:active {
+  transform: scale(0.95);
+}
+
+.button-reverse-red {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--color-red);
+  background-color: transparent;
+  border: 2px solid var(--color-red);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.button-reverse:hover {
+  background-color: var(--color-red);
+  color: var(--text-alt);
+}
+
+.button-reverse:active {
+  transform: scale(0.95);
+}
+
+.button-reverse-yellow {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--color-yellow);
+  background-color: transparent;
+  border: 2px solid var(--color-yellow);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.button-reverse-yellow :hover {
+  background-color: var(--color-yellow);
+  color: var(--text-alt);
+}
+
+.button-reverse-yellow :active {
+  transform: scale(0.95);
+}
+
+.button-reverse-orange {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--color-orange);
+  background-color: transparent;
+  border: 2px solid var(--color-orange);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.button-reverse-orange:hover {
+  background-color: var(--color-orange);
+  color: var(--text-alt);
+}
+
+.button-reverse-orange:active {
+  transform: scale(0.95);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid hsla(0, 0%, 90%, 1);
-  margin-bottom: 60px;
+  padding: 1rem 0;
+  background-color: var(--background-primary);
+  border-bottom: 2px solid var(--color-red);
 }
 
-.header ul {
+.header a {
+  color: var(--color-red);
+}
+
+.header a:hover {
+  color: var(--color-red-alt);
+}
+
+.nav ul {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
 
-.header ul li {
-  margin-left: 20px;
-}
-
-.header ul li a {
-  display: flex;
-  align-items: center;
-}
-
-.header ul li a:hover {
-  color: #777;
-}
-
-.header ul li a svg {
-  margin-right: 5px;
+.nav li {
+  margin-left: 1rem;
 }
