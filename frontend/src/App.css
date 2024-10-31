@@ -207,7 +207,7 @@ input {
 
 @media (max-width: 60rem) {
   .container-3col {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -263,4 +263,9 @@ input {
   text-align: left;
   display: block;
   margin: 0 0 5px 3px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 60rem;
 }

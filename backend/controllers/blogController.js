@@ -5,6 +5,27 @@ const asyncHandler = require('express-async-handler');
 const createBlogPost = asyncHandler(async (req, res) => {
   const { title, content, images, author, tags } = req.body;
 
+  // Check if required fields are present
+  if (!title || !content || !author) {
+    res.status(400);
+    throw new Error('Title, content, and author are required fields.');
+  }
+
+  // Optional: Validate image URLs (if images is not empty)
+  if (images && images.length > 0) {
+    const invalidImages = images.filter((img) => !isValidUrl(img));
+    if (invalidImages.length > 0) {
+      res.status(400);
+      throw new Error(`Invalid image URLs: ${invalidImages.join(', ')}`);
+    }
+  }
+
+  // Optional: Validate tags if provided
+  if (tags && !Array.isArray(tags)) {
+    res.status(400);
+    throw new Error('Tags must be an array of strings.');
+  }
+
   const newBlogPost = new Blog({
     title,
     content,
@@ -16,6 +37,12 @@ const createBlogPost = asyncHandler(async (req, res) => {
   const savedPost = await newBlogPost.save();
   res.status(201).json(savedPost);
 });
+
+// Helper function to validate URLs
+const isValidUrl = (string) => {
+  const regex = /^(ftp|http|https):\/\/[^ "]+$/;
+  return regex.test(string);
+};
 
 // Get a single blog post by ID
 const getBlogPostById = asyncHandler(async (req, res) => {

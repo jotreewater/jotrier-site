@@ -21,120 +21,126 @@ export default function Home() {
         </p>
       </Hero>
 
-      <section className="bg-color-red-alt ">
-        <div className="section-header bounce">
-          <h2>Scroll for more</h2>
-          <div>
-            <FiChevronDown style={{ transform: 'scaleX(2)' }} />
-          </div>
-        </div>
-        <div className="container-3col">
-          <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-            title="About Me"
-          >
+      <section className="bg-color-red-alt">
+        <div className="container">
+          <div className="section-header bounce">
+            <h2>Scroll for more</h2>
             <div>
-              <div className="media-container">
-                <img src={headshot} alt="Joseph.png" className="headshot"></img>
-              </div>
-              <div>
-                <p>
-                  Joseph is a Software Engineer and Technology Consultant based
-                  out of Las Vegas, Nevada.
-                </p>
-              </div>
+              <FiChevronDown style={{ transform: 'scaleX(2)' }} />
             </div>
-          </Card>
-          <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-            title="Resume"
-          >
-            <div>
-              <div className="media-container">
-                <a
-                  href={pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-color-orange"
-                >
-                  <AiOutlineFilePdf
-                    style={{
-                      height: '100%',
-                      width: '100%',
-                      color: 'var(--color-red)',
-                    }}
-                  />
-                </a>
-              </div>
+          </div>
+          <div className="container-3col">
+            <Card
+              backgroundColor="var(--background-primary)"
+              textColor="var(--text-primary)"
+              title="About Me"
+            >
               <div>
-                <p>
+                <div className="media-container">
+                  <img
+                    src={headshot}
+                    alt="Joseph.png"
+                    className="headshot"
+                  ></img>
+                </div>
+                <div>
+                  <p>
+                    Joseph is a Software Engineer and Technology Consultant
+                    based out of Las Vegas, Nevada.
+                  </p>
+                </div>
+              </div>
+            </Card>
+            <Card
+              backgroundColor="var(--background-primary)"
+              textColor="var(--text-primary)"
+              title="Resume"
+            >
+              <div>
+                <div className="media-container">
                   <a
                     href={pdf}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-color-orange"
                   >
-                    Click Here
-                  </a>{' '}
-                  to open Joseph's resume in a new tab for your viewing
-                  pleasure.
-                </p>
+                    <AiOutlineFilePdf
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                        color: 'var(--color-red)',
+                      }}
+                    />
+                  </a>
+                </div>
+                <div>
+                  <p>
+                    <a
+                      href={pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-color-orange"
+                    >
+                      Click Here
+                    </a>{' '}
+                    to open Joseph's resume in a new tab for your viewing
+                    pleasure.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Card>
-          <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-            title="Projects"
-          >
-            <div>
-              <div className="media-container">
-                <Link to="/projects">
-                  <AiOutlineProject
-                    style={{
-                      height: '100%',
-                      width: '100%',
-                      color: 'var(--color-red)',
-                    }}
-                  />
-                </Link>
-              </div>
+            </Card>
+            <Card
+              backgroundColor="var(--background-primary)"
+              textColor="var(--text-primary)"
+              title="Projects"
+            >
               <div>
-                <p>
-                  <Link className="text-color-orange">Click Here</Link> to
-                  browse a collection of projects that Joseph has been involved
-                  in.
-                </p>
+                <div className="media-container">
+                  <Link to="/projects">
+                    <AiOutlineProject
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                        color: 'var(--color-red)',
+                      }}
+                    />
+                  </Link>
+                </div>
+                <div>
+                  <p>
+                    <Link className="text-color-orange">Click Here</Link> to
+                    browse a collection of projects that Joseph has been
+                    involved in.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Card>
-          <Card
-            backgroundColor="var(--background-primary)"
-            textColor="var(--text-primary)"
-            title="Blog"
-          >
-            <div>
-              <div className="media-container">
-                <Link to="/blog">
-                  <RiArticleLine
-                    style={{
-                      height: '100%',
-                      width: '100%',
-                      color: 'var(--color-red)',
-                    }}
-                  />
-                </Link>
-              </div>
+            </Card>
+            <Card
+              backgroundColor="var(--background-primary)"
+              textColor="var(--text-primary)"
+              title="Blog"
+            >
               <div>
-                <p>
-                  <Link className="text-color-orange">Click Here</Link> to keep
-                  up to date with what Joseph is currently working on.
-                </p>
+                <div className="media-container">
+                  <Link to="/blog">
+                    <RiArticleLine
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                        color: 'var(--color-red)',
+                      }}
+                    />
+                  </Link>
+                </div>
+                <div>
+                  <p>
+                    <Link className="text-color-orange">Click Here</Link> to
+                    keep up to date with what Joseph is currently working on.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </div>
         </div>
       </section>
     </>

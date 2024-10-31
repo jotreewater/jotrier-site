@@ -22,6 +22,7 @@ const handleError = (error) => {
 // Create a new blog post
 export const createBlogPost = async (postData) => {
   try {
+    console.log(postData);
     const response = await axios.post(API_URL, postData);
     return response.data;
   } catch (error) {

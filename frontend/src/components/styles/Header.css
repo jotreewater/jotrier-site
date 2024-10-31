@@ -32,3 +32,58 @@
 .nav li {
   margin-left: 1rem;
 }
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-alt);
+}
+
+.menu-icon:active {
+  color: var(--color-yellow);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav.active ul {
+  display: block; /* Show dropdown links when active */
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav li {
+  margin-left: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 60rem) {
+  .nav ul {
+    display: none; /* Hide links by default on smaller screens */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position dropdown */
+    background-color: var(--color-red); /* Same background as header */
+    top: 60px; /* Adjust as needed */
+    right: 0; /* Align to the right */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .nav.active ul {
+    display: flex; /* Show dropdown links when active */
+    border-bottom: 0.25rem solid var(--color-yellow);
+    padding: 0 1rem;
+    margin-top: -1rem;
+  }
+
+  .menu-icon {
+    display: flex; /* Show the hamburger icon */
+  }
+}
