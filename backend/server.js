@@ -2,6 +2,7 @@
 const { errorMiddleware } = require('./middleware/errorMiddleware');
 const { private } = require('./middleware/authMiddleware');
 const connectDB = require('./config/db');
+const path = require('path');
 
 // env setup
 const dotenv = require('dotenv').config();
@@ -25,15 +26,16 @@ app.use('/api/blog', require('./routes/blogRoutes'));
 // middleware
 app.use(errorMiddleware);
 
-// default response
-app.get('/api', (req, res) => {
-  res.status(200).json({ message: `You've hit the jotrier API` });
-});
-
-// private test
-app.get('/api/private', private, (req, res) => {
-  res.status(200).json({ message: `You've hit the private endpoint` });
-});
+// serve frontend
+if (process.env.NODE_ENV === 'production') {
+  console.log('Serving Production Build');
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+  app.get('*', (req, res) => {
+    return res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html');
+  });
+} else {
+  console.log('Servering Dev Build');
+}
 
 // entrypoint
 const PORT = process.env.PORT || 5000;
