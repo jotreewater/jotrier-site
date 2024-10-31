@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
     return res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html');
   });
 } else {
-  console.log('Servering Dev Build');
+  console.log('Serving Dev Build');
 }
 
 // entrypoint
