@@ -7,8 +7,8 @@ import { RiArticleLine } from 'react-icons/ri';
 
 import Card from '../components/Card';
 import './styles/Home.css';
-import headshot from '../assets/fire1000.jpg';
-import pdf from '../assets/resume_08.29.2024.pdf';
+import headshot from '../assets/headshot.jpg';
+import pdf from '../assets/resume.pdf';
 import Hero from '../components/Hero';
 
 export default function Home() {
