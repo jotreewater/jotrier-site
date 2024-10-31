@@ -31,7 +31,9 @@ if (process.env.NODE_ENV === 'production') {
   console.log('Serving Production Build');
   app.use(express.static(path.join(__dirname, '../frontend/build')));
   app.get('*', (req, res) => {
-    return res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html');
+    return res.sendFile(
+      path.join(__dirname, '../frontend/build', 'index.html')
+    );
   });
 } else {
   console.log('Serving Dev Build');
